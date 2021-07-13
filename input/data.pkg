@@ -2,4 +2,5 @@
  &PACKAGES
  useMNC=.TRUE.,
  useDIAGNOSTICS=.TRUE.,
+ useOBCS=.TRUE.,
  &

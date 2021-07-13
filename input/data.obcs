@@ -1,0 +1,10 @@
+#!/usr/bin/bash Example "data.obcs" file
+# Open-boundaries
+ &OBCS_PARM01
+#
+ &
+
+# Orlanski parameters
+ &OBCS_PARM02
+#
+ &
