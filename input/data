@@ -5,18 +5,19 @@
 # Continuous equation parameters
  &PARM01
 # sRefFile='sref.box',
-# tRefFile='tref.box',
+ tRefFile='temp.prof',
 # tRef=100*20.,
 # sRef=100*35.,
  viscAh=10.E0,
  viscAz=0.E-5,
-# no_slip_sides=.FALSE.,
-# no_slip_bottom=.FALSE.,
+ no_slip_sides=.FALSE.,
+ no_slip_bottom=.FALSE.,
  diffKhT=10.E0,
  diffKzT=0.E-5,
 # corimap = 0 -> fplane
- selectCoriMap=0,
+# selectCoriMap=0,
  f0=1.0e-4,
+ beta=2.E-11,
  eosType='LINEAR',
  tAlpha=2.E-4,
  sBeta =0.E-4,
@@ -57,9 +58,17 @@
 # Gridding parameters
  &PARM04
  usingCartesianGrid=.TRUE.,
+# dXspacing=0.1,
+# dYspacing=0.1,
+# delZ=100*0.1,
+# dxSpacing=0.75,
+# dySpacing=0.75,
  delXfile='dx.grid',
  delYfile='dy.grid',
  delRFile='dz.grid',
+# usingSphericalPolarGrid=.TRUE.,
+# ygOrigin=34,
+# xgOrigin=284,
  &
 
 # Input datasets
