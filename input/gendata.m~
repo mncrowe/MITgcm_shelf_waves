@@ -14,18 +14,16 @@ d = 10e3;      % shelf width
 
 dx = Lx/nx*ones(nx,1);
 dy = Ly/ny*ones(ny,1);
-dz = H1/nz*ones(nz,1);
+dz = Lz/nz*ones(nz,1);
 
 x = dx(1)/2+cumsum([0; dx]);
 y = dx(1)/2+cumsum([0; dy]);
 z = dx(1)/2+cumsum([0; dz]);
 
-h = ones(nx,1)*((H0-H1)*exp(-y(2:end)/d)'+H1);
+h = ones(nx,1)*((H0-H1)*exp(-y(2:end)/d)+H1);
 
 
 
 fid=fopen('dx.grid','w',ieee); fwrite(fid,dx,accuracy); fclose(fid);
 fid=fopen('dy.grid','w',ieee); fwrite(fid,dy,accuracy); fclose(fid);
 fid=fopen('dz.grid','w',ieee); fwrite(fid,dz,accuracy); fclose(fid);
-
-fid=fopen('topog','w',ieee); fwrite(fid,h,accuracy); fclose(fid);
